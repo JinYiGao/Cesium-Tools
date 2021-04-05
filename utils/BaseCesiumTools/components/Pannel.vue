@@ -4,7 +4,7 @@
  * @Author: JinYiGao
  * @Date: 2021-03-23 11:47:15
  * @LastEditors: JinYiGao
- * @LastEditTime: 2021-03-24 23:13:39
+ * @LastEditTime: 2021-04-05 21:13:51
 -->
 <template>
     <div class="mainbody">
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import {  CameraTools, Draw } from '../index'
+import {  CameraTools, PathlineRoaming, Draw } from '../index'
 export default {
     data(){
         return{
-            cameraTools: undefined,
-            drawer: undefined
+            cameraTools: Object.freeze(undefined),
+            drawer: Object.freeze(undefined)
         }
     },
     methods:{
@@ -50,7 +50,6 @@ export default {
             }
             this.cameraTools.getCameraViewPoint();
             this.cameraTools.GetCameraPosition();
-            console.log('开启鼠标获取坐标!');
         },
         
         //关闭鼠标点击坐标获取
@@ -60,7 +59,6 @@ export default {
                 this.cameraTools = new CameraTools(this.getViewer());
             }
             this.cameraTools.stop();
-            console.log('关闭鼠标获取坐标!');
         },
 
         //开始绘制路径
@@ -144,7 +142,7 @@ export default {
 
         //导出函数，name为导出的文件名，data为导出的json数据
         exportData(name, data) {
-            //const content = window.btoa(encodeURIComponent(JSON.stringify(data)))
+            const content = window.btoa(encodeURIComponent(JSON.stringify(data)))
             const blobData = new Blob([JSON.stringify(data)])
             const filename = `${name}.json` //可以自定义后缀名
             console.log(blobData)
@@ -160,8 +158,8 @@ export default {
     height: 600px;
     width: 390px;
     background-color: rgba(35, 37, 37, 0.4);
-    top: 2%;
-    left: 1%;
+    top: 8.8%;
+    left: 12%;
 }
 .box{
     position: relative;
