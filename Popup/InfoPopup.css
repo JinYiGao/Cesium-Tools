@@ -1,0 +1,125 @@
+.bx-popup-ctn{
+    /* 整个弹出框 */
+    position: absolute;
+    z-index: 11;
+    background-color:rgba(22, 37, 68, 0.8); 
+    color: #fff;
+    text-align: left;
+    
+    border: 1px outset rgb(184, 188, 189);
+    box-shadow:1px 1px 5px 1px rgba(223, 227, 228, 0.548) ;
+    border-radius: 2px;
+}
+
+.bx-popup-header-ctn{
+    background: rgba(19, 32, 58, 0.6);
+    color: #fff;
+    font-size: 15px;
+    text-align:center;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    padding: 5px;
+
+}
+
+/* 滚动条 */
+/* ::-webkit-scrollbar  
+{  
+    width: 10px;  
+    height: 16px;  
+    background-color: rgba(19, 32, 58, 0.6);  
+}   */
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 12px;  
+    height: 16px;  
+    background-color: rgba(19, 32, 58, 0.6);  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5);  
+    border-radius: 10px;  
+    background-color: rgba(19, 32, 58, 0.6);  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(19, 32, 58, 0.6);  
+    background-color:rgba(255, 255, 255, 0.7);  
+}  
+
+
+.bx-popup-tip-container {
+    /* 箭头 */
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bx-popup-tip {
+    width: 20px;
+    background: rgba(255, 255, 255,0.7);
+    height: 17px;
+    padding: 0px;
+    margin: -10px auto 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.bx-popup-close {
+    /* 关闭 图示 */
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background: rgba(11, 20, 39, 0.95);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px black;
+    cursor: pointer;
+}
+
+.bx-popup-close:hover {
+    background: red;
+}
+.bx-popup-close:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background: white;
+    transform: rotate(45deg);
+    top: 8px;
+    left: 4px;
+}
+.bx-popup-close:after{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background: white;
+    transform: rotate(-45deg);
+    top: 8px;
+    left: 4px;
+}
